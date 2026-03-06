@@ -1,91 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AA Foodpedia || Nigerian Cuisine Websites</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 </head>
+
 <body>
-  <nav class=" d-flex justify-content-between py-3 px-5 bg-light " style="position: sticky; top: 0;" >
-    <span class="fw-bold" >AA Foodpedia</span>
-    <button class="btn btn-success">login</button>
-  </nav>
-<!-- hero -->
- <div class="d-flex py-3 justify-content-center" style="background-color: #FFC042; height: 80vh;" >
-    <!-- right -->
-     <div>
-      <p class="fw-bold " style="padding-top: 120px; font-size: 60px;">Nigerian Cuisine Hub</p>
-     <span class="text-center ps-5 fs-4">Explore Nigeria's rich culinary heritage</span>
-     <!-- <span>Discover. Cook. Enjoy</span> -->
-      <!-- search bar  -->
-     <div class=""></div>
-    </div>  
-     
+  <nav class="navbar navbar-expand-lg d-lg-flex justify-content-between px-5 pt-3" style="background-color: white; position: sticky; top: 0; z-index: 1000; box-shadow: 5px white;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" id="navBrand" style="color: green;">AA Foodpedia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: green;">
+              Category
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="#" style="color: green;" onclick="showCategory('Main Course')" >Main Course</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Snack/Street Food')">Snacks/Street Food</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Breakfast/Snack')">Breakfast/Snack</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Side Dish/Main')">Side Dish/Main</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Snack/Dessert')">Appetizer/Side Dish</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Swallow')">Appetizer/Side Dish</a></li>
+              <li><a class="dropdown-item" href="#" style="color: green;" onclick="showCategory('Appetizer/Side Dish')">Appetizer/Side Dish</a></li>
+            </ul>
 
-     <!--left -->
-    <div class="d-flex align-items-center justify-content-center " style="height: 100%; width: 50%;" >
-        <img src="image/egusi-removebg-preview.png" alt="" width="300px">
-    </div>
- </div>
-
-  <!-- category  -->
-   <h3 class="text-center pt-5 fs-3">Category</h3>
-   <span class="d-block text-center">Explore different categories of authentic dishes</span>
-   <section class="d-flex justify-content-center gap-5 pt-3" style="flex-wrap: wrap;">
-    <div style="flex-direction: column;" class="d-flex">
-      <img src="image/all.jpg" alt="" style="width:200px; height: 200px;" class="rounded-circle">
-      <a href="allfoods.html" class="btn d-block" >All foods</a>
-   </div>
-    <div style="flex-direction: column;" class="d-flex">
-      <img src="image/all.jpg" alt="" style="width: 200px; height: 200px;" class="rounded-circle">
-      <button class="btn d-block" >Soups</button>
-   </div>
-    <div style="flex-direction: column;" class="d-flex">
-      <img src="image/all.jpg" alt="" style="width: 200px; height: 200px;" class="rounded-circle">
-      <button class="btn d-block" >Main Course</button>
-   </div>
-   </section>
-   <section class="d-flex justify-content-center gap-5 pt-4">
-     <div style="flex-direction: column;" class="d-flex">
-      <img src="image/all.jpg" alt="" style="width: 200px; height: 200px;" class="rounded-circle">
-      <button class="btn d-block" >Snacks</button>
-   </div>
-    <div style="flex-direction: column;" class="d-flex">
-      <img src="image/all.jpg" alt="" style="width: 200px; height: 200px;" class="rounded-circle">
-      <button class="btn d-block" >Vegetarian</button>
-   </div>
-   </section>
-
-   <!-- regions -->
-    <section class="text-center py-5">
-      <h3>Regions</h3>
-      <div class="d-flex justify-content-center gap-5 pt-4">
-        <button class="btn rounded-pill bg-secondary p-1 px-4 text-light border-none">All</button>
-    <button class="btn rounded-pill bg-secondary p-1 px-2 text-light border-none">South-East</button>
-    <button class="btn rounded-pill bg-secondary p-1 px-2 text-light border-none">South-West</button>
-    <button class=" btn rounded-pill bg-secondary p-1 px-2 text-light border-none">South-South</button>
-    <button class="btn rounded-pill bg-secondary p-1 px-2 text-light border-none">Northern</button>
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: green;">
+              Region
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" id="allRegion"  style="color: green;" onclick="showRegion('All regions')">All</a></li>
+              <li><a class="dropdown-item" href="#" id="" style="color: green;" onclick="showRegion('South-South Nigeria')">South-South</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showRegion('South-East Nigeria')" style="color: green;">South-East</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showRegion('South-West Nigeria')" style="color: green;">South-West</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showRegion('Northern Nigeria')" style="color: green;">Northern</a></li>
+            </ul>
+          </li>        
+        </ul>
+      </ul>
+        <img src="icons/solar--heart-linear.png" alt="" onclick="showFavorites()">
       </div>
+    </div>
+  </nav>
 
-    </section>
+  <!-- hero section  -->
+  <div class="py-3 justify-content-center hero" id="heroid" style="display: flex;">
+    <!-- right -->
+    <div>
+      <p class="fw-bold hub " >Nigerian Cuisine Hub</p>
+      <span style="color: green;" class="text-center  fs-4" id="typewriter"></span>
+      <!-- <span>Discover. Cook. Enjoy</span> -->
+      <!-- search bar  -->
+      <div class=""></div>
 
-    <footer style="width: 100%; height: 30vh; border-top-left-radius: 100%; border-top-right-radius: 100%;" class="bg-dark">
+      <input type="text" class="form-control w-100 rounded-pill p-2" placeholder="Search for food..."
+        style="background-color: white;  border: 2px solid  #f7ba5f; margin-top: 4%;" onkeyup="searchProduct(event)">
+        <div class="ps-2">
+          <input type="checkbox" id="vege" > <span style="color: green;">Vegetarian</span>
+          <input type="checkbox" id="spicy"> <span style="color: green;">Spicy</span>
+        </div>
+    </div>
 
-    </footer>
+    
+
+
+    <!--left -->
+    <div class="d-none d-lg-block" style="height: 100%;">
+      <img id="slider" src="" alt="" width="300px" style="margin-left: 30%; margin-top: 5%; ">
+    </div>
+  </div>
+
+
+
+
+  <h3 class="text-center fs-1 text-success" id="allfood">All Foods</h3>
+  <div id="show" class="d-flex justify-content-center gap-4 my-4" style="flex-wrap: wrap;">
+    <!-- image -->
+    <div></div>
+
+
+
+  </div>
+  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-lg" >
+      <div class="modal-content" >
+       
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<footer style="width: 100%; height: 30vh; border-top-left-radius: 100%; border-top-right-radius: 100%;" class="foot">
+
+  </footer>
 
 
 
 
 
-
-
-
-
-<!-- <button onclick="listFood()">list</button> -->
+  <script src="script.js"></script>
 
 </body>
-<script src="script.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
 </html>
