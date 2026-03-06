@@ -29,7 +29,9 @@
     
 }
 @media (max-width:767px) {
-  
+    .hero{
+        height: 50vh;
+    }
     .hub{
         font-size: 40px;
     }
