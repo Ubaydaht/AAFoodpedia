@@ -32,12 +32,16 @@ const image = [
   "image/yamarita.jpg",
 ];
 
+const loader = document.getElementById("loader")
+
+
 const listFood = async () => {
   const result = fetch(endpoint);
   // console.log(result);
   const awaitedResult = await result;
   //   console.log(awaitedResult);
   const convertedResult = await awaitedResult.json();
+  loader.style.display = "none"
 
   show.innerHTML = "";
 
@@ -243,7 +247,7 @@ const displayInfo = async (info) => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
      <div class="modal-body d-flex gap-3">
-            <img src="${image[info]}" alt="" srcset="" style='width:200px;'>
+            <img src="${image[info]}" alt="" srcset="" style='width:180px;'>
             <div>
               <span>${foodData.description}</span>
               <span class='d-block'><b>Ingredients:</b> ${foodData.ingredients}</span>
